@@ -290,7 +290,7 @@ body{
 }
 
 .skills__grid{
-    display: grid;
+    display: flex;
     gap: var(--space-lg);
     grid-template-columns: 1fr;
 }
