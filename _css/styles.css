@@ -1,13 +1,12 @@
-/*  =======================================================
-    Variables CSS pata consistencia de diseño
-    ======================================================= */
-:root {
-    /* Colores principales */
+/*  ==========================================
+    Variables CSS para consistencia de diseño
+    ========================================== */
+:root{
+    /*Coloresprincipales*/
     --color-primary: #2563eb;
     --color-primary-dark: #1d4ed8;
     --color-secondary: #64748b;
     --color-accent: #f59e0b;
-
 
     /* Colores de texto */
     --color-text: #1e293b;
@@ -16,34 +15,33 @@
 
     /* Colores de fondo */
     --color-bg: #ffffff;
-    --color-bg-ligth: #f8fafc;
+    --color-bg-light: #f8fafc;
     --color-bg-dark: #0f172a;
 
-    /* Tipografía */
-    --font-primary: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    /* Tipografia */
+    --font-primary: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI','sans-serif';
     --font-weight-normal: 400;
     --font-weight-medium: 500;
-    --font-wight-bold: 700;
+    --font-weight-bold: 700;
 
-    /* Espaciado consistente */
-    --space-xs: 0.5rem;
+    /* Espaciado Consistente */
+    --space-xs: .5rem;
     --space-sm: 1rem;
     --space-md: 1.5rem;
     --space-lg: 2rem;
     --space-xl: 3rem;
     --space-2xl: 4rem;
-
+    
     /* Breakpoints */
     --breakpoint-sm: 640px;
-    --beakpoint-md: 768px;
+    --breakpoint-md: 768px;
     --breakpoint-lg: 1024px;
     --breakpoint-xl: 1280px;
 }
 
-/*  =======================================================
-        Reset y Estilos base
-    ======================================================= */
-
+/*  ==================================
+    Reset y Estilos Base
+    ================================== */
 *,
 *::before,
 *::after{
@@ -65,47 +63,43 @@ body{
     background-color: var(--color-bg);
 }
 
-/*  =======================================================
-        Habilidades de loyaut
-        ======================================================= */
-
-.container {
+/*  =============================
+    Utilidades de Layaut
+    ============================= */
+.container{
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: var(--space-sm);
+    padding: 0 var(--space-sm);
 }
 
-/* En tablets y desktops, aumentamos el padding lateral */
-
-@media (min-width: 768px) {
-    .container {
-        padding: var(--space-md);
+/* En tablets y desktop, aumentamos el padding lateral */
+@media (min-widht: 768px){
+    .container{
+        padding: 0 var(--space-lg);
     }
 }
 
-/* ========================================================
-        Tipografía Responsive
-    ======================================================= */
-
-.section__title {
+/*  ============================
+    Tipografía Responsive
+    ============================ */
+.section__title{
     font-size: clamp(1.75rem, 4vw, 2.5rem);
-    font-weight: var(--font-wight-bold);
+    font-weight: var(--font-weight-bold);
     color: var(--color-text);
     text-align: center;
     margin-bottom: var(--space-xl);
 }
 
-/*  =======================================================
-        Header y Navegación
-    ======================================================= */
-
-.header {
+/*  ============================
+    Header y Navegación
+    ============================ */
+.header{
     background-color: var(--color-bg);
     border-bottom: 1px solid #e2e8f0;
     position: sticky;
     top: 0;
-    z-index: 100;   
+    z-index: 100;
 }
 
 .header__content{
@@ -117,55 +111,55 @@ body{
 
 .logo__text{
     font-size: 1.5rem;
-    font-weight: var(--font-wight-bold);
+    font-weight: var(--font-weight-bold);
     color: var(--color-primary);
 }
 
-.nav__list {
+.nav__list{
     display: flex;
     list-style: none;
     gap: var(--space-md);
 }
+
 .nav__link{
     text-decoration: none;
     color: var(--color-text);
     font-weight: var(--font-weight-medium);
-    transition: color 0.3s ease;
+    transition: color .3s ease;
 }
-.nav__link:hover {
+
+.nav__link:hover{
     color: var(--color-primary);
 }
 
-/* Navegación responsive - en movil ocultamos algunos elementos */
-@media (max-width: 640px) {
-    .nav__list {
-        gap: var(--space-sm)
+/* Navegación reponsive - en móvil ocultamos algunos elementos */
+@media (max-width: 767px) {
+    .nav__list{
+        gap: var(--space-sm);
     }
 
-    .nav__link {
-        font-size: 0.9rem;
+    .nav__link{
+        font-size: .9rem;
     }
 }
 
-/*  =======================================================
-        Seccion Hero
-    ======================================================= */
-
-.hero {
-    background-color: linear-gradient(135deg, var(--color-primary) 0%, #e2e8f0 100%);
+/*  ================================
+    Sección Hero
+    ================================ */
+.hero{
+    background: linear-gradient(135deg, var(--color-text-light) 0% , #e2e8f0 100%);
     padding: var(--space-2xl) 0;
     text-align: center;
 }
 
-.hero__title {
+.hero__title{
     font-size: clamp(2rem, 6vw, 3.5rem);
-    font-weight: var(--font-wight-bold);
+    font-weight: var(--font-weight-bold);
     line-height: 1.2;
     margin-bottom: var(--space-md);
 }
 
-
-.hero__highlight {
+.hero__highlight{
     color: var(--color-primary);
     display: block;
 }
@@ -177,56 +171,53 @@ body{
     margin: 0 auto var(--space-xl);
 }
 
-.hero__actions {
+.hero__actions{
     display: flex;
     gap: var(--space-sm);
     justify-content: center;
     flex-wrap: wrap;
 }
 
-/* =========================================================
-        Botones responsive
-    ======================================================= */
-
+/*  ==============================
+    Botones Responsive 
+    ============================== */
 .btn {
     display: inline-block;
     padding: var(--space-sm) var(--space-lg);
-    border-radius: 8px;
     text-decoration: none;
     font-weight: var(--font-weight-medium);
     text-align: center;
-    transition: all 0.3s ease;
+    transition: all .3s ease;
     border: 2px solid transparent;
     cursor: pointer;
 }
 
-.btn--primary {
+.btn--primary{
     background-color: var(--color-primary);
     color: var(--color-text-white);
-    border-color: var(--color-primary-dark);
+    border-color: var(--color-primary);
 }
 
-
-.btn--primary:hover {
+.btn--primary:hover{
     background-color: var(--color-primary-dark);
     border-color: var(--color-primary-dark);
     transform: translateY(-2px);
 }
 
-.btn--secondary {
+.btn--secondary{
     background-color: transparent;
     color: var(--color-primary);
     border-color: var(--color-primary);
 }
 
-.btn--secondary:hover {
+.btn--secondary:hover{
     background-color: var(--color-primary);
     color: var(--color-text-white);
 }
 
-/* En móvil, lod botones ocupan todo el ancho disponible */
+/* En móvil, los botones ocupan todo el ancho disponible */
 @media (max-width: 640px) {
-    .hero__actions {
+    .hero__actions{
         flex-direction: column;
         align-items: center;
     }
@@ -237,22 +228,20 @@ body{
     }
 }
 
-
-/*  =======================================================
-        Seccion About
-    ======================================================= */
-
-.about {
-    padding: var(--sapce-2xl);
+/*  ===============================
+    Sección about
+    =============================== */
+.about{
+    padding: var(--space-2xl);
 }
 
-.about__content {
-    display: flex;
+.about__content{
+    display: grid;
     gap: var(--space-xl);
     align-items: center;
 }
 
-.about__text p {
+.about__text p{
     margin-bottom: var(--space-md);
     font-size: 1.1rem;
     line-height: 1.7;
@@ -262,8 +251,8 @@ body{
     margin-bottom: 0;
 }
 
-.placeholder-image {
-    background-color: var(--color-bg-ligth);
+.placeholder-image{
+    background-color: var(--color-bg-light);
     border: 2px dashed var(--color-secondary);
     border-radius: 12px;
     aspect-ratio: 1;
@@ -274,41 +263,47 @@ body{
     font-weight: var(--font-weight-medium);
 }
 
-/* En tablaet y desktop, usamos de dois columnas */
+.my_image{
+    border-radius: 12px;
+    width: 150px;
+    height: 200px;
+}
 
+/* En tablets y desktop, usamos layaut de dos columnas*/
 @media (min-width: 768px) {
-    .about__content {
+    .about__content{
         grid-template-columns: 2fr 1fr;
     }
 
-    .placeholder-image {
+    .placeholder-image{
         max-width: 300px;
         justify-self: center;
     }
 }
 
-/* Seccion Skills con Grid  responsive */
-
-.skills {
-    background-color: var(--color-bg-ligth);
+/*  ====================================
+    Sección Skills con Grid Responsive
+    ==================================== */
+.skills{
+    background-color: var(--color-bg-light);
     padding: var(--space-2xl) 0;
 }
 
-.skills__grid {
+.skills__grid{
     display: grid;
-    grid-template-columns: 1fr;
     gap: var(--space-lg);
+    grid-template-columns: 1fr;
 }
 
-/* Grid responsive que de adapta automaricamente */
-@media (min-width: 640px) {
-    .skills__grid {
-        grid-template-columns: repeat (2, 1fr);
+/* Grid responsive que se adapta automáticamente */
+@media (min-width: 640px ) {
+    .skills__grid{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (min-widht: 1024px) {
-    .skills__grid {
+@media (min-width: 1024) {
+    .skills__grid{
         grid-template-columns: repeat(4, 1fr);
     }
 }
@@ -318,43 +313,43 @@ body{
     border-radius: 12px;
     padding: var(--space-lg);
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: tranform .3s ease, box-shadow .3s ease;
 }
 
-.skill-card:hover {
+.skill-card:hover{
     transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .1);
 }
 
-.skill-card-title {
+.skill-card__title{
     font-size: 1.25rem;
-    font-weight: var(--font-wight-bold);
-    color: var(--color-text);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
     margin-bottom: var(--space-sm);
 }
 
-.skill-card-description {
+.skill-card__description{
     color: var(--color-text-light);
     line-height: 1.6;
 }
 
-/* =======================================================
-        Footer
-    ======================================================= */
-
-.footer {
+/*  ===============================
+    Footer
+    =============================== */
+.footer{
     background-color: var(--color-bg-dark);
     color: var(--color-text-white);
-    padding: var(--space-2x1) 0;
+    padding: var(--space-2xl) 0;
     text-align: center;
 }
 
-.footer__text {
-    font-size: 0.875rem;
-    color: var(--color-text-light);
+.footer__title{
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-sm);
 }
 
-.footer__description {
+.footer__description{
     font-size: 1.1rem;
     color: #94a3b8;
     margin-bottom: var(--space-xl);
@@ -363,10 +358,10 @@ body{
     margin-right: auto;
 }
 
-.footer__contact {
+.footer__contact{
     display: flex;
-    justify-content: center;
     gap: var(--space-lg);
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -374,26 +369,26 @@ body{
     color: var(--color-text-white);
     text-decoration: none;
     font-weight: var(--font-weight-medium);
-    padding: var(--sapace-sm) var (--space-md);
-    border: 1px solido #374151;
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid #374151;
     border-radius: 8px;
-    transition: all 0.3s ease
+    transition: all .3s ease;
 }
 
-.contact-link:hover {
-    background-color: var(--color-primary);
+.contact-link:hover{
     border-color: var(--color-primary);
+    background-color: var(--color-primary);
 }
 
-/* En móvil, los enlaces de contacto se aplinan verticalmente */
+/* En móvil, los enlaces de contacto se apilan verticalmente */
 @media (max-width: 640px) {
-    .footer__contact {
+    .footer__contact{
         flex-direction: column;
         align-items: center;
     }
 
-    .contact-link {
+    .contact-link{
         width: 100%;
-        max-width: 200px;
+        max-width: 250px;
     }
 }
